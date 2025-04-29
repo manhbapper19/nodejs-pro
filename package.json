@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/manhbapper19/nodejs-pro/issues"
   },
-  "homepage": "https://github.com/manhbapper19/nodejs-pro#readme"
+  "homepage": "https://github.com/manhbapper19/nodejs-pro#readme",
+  "dependencies": {
+    "express": "5.0.1"
+  }
 }
