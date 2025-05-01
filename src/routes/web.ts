@@ -1,17 +1,12 @@
-const express = require("express");
+import express, { Express } from "express";
+import { getCreateUserPage, getHomePage } from "../controllers/user.controller";
 
 const router = express.Router();
 
-const webRoutes = (app) => {
-    router.get("/", (req, res) => {
-        res.render("home.ejs");
-    });
-    router.get("/hoidanit", (req, res) => {
-        res.send("I have a problem with my code!");
-    });
-    router.get("/abc", (req, res) => {
-        res.send("hello abc!");
-    });
+const webRoutes = (app: Express) => {
+    router.get("/", getHomePage);
+    router.get("/create-user", getCreateUserPage);
+
     app.use("/", router);
 };
 export default webRoutes;
